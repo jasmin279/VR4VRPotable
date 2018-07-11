@@ -6,7 +6,7 @@ public class cautiousnessManagerS : MonoBehaviour {
 	public cautiousnessVisualManagerS visualM;
 	public trafficManagerS trafficM;
 	public characterS characterM;
-    public distracterManagerS distracterM;
+        public distracterManagerS distracterM; //extra
 
 	private int state = 0;
 	private int randomInstanceCount = 0;
@@ -32,6 +32,7 @@ public class cautiousnessManagerS : MonoBehaviour {
 		cautiousnessVisualManagerS.debugLines[0] = "Skill: " + generalManagerS.ActiveSkill + ", Sub-Tusk: " + generalManagerS.ActiveSubTask + ", Level: " + generalManagerS.ActiveLevel + ", State: " + state;
 		cautiousnessVisualManagerS.debugLines[1] = "Time: " + Time.timeSinceLevelLoad.ToString("#");
 		cautiousnessVisualManagerS.debugLines[2] = "Last Activity Time: " + timerS.lastActivitiyTime.ToString("#.#");
+		
 		//Debug
 		if (Input.GetKeyDown(KeyCode.W))
 			CreateState((CautiousnessSubTask)generalManagerS.ActiveSubTask, generalManagerS.ActiveLevel, 100);
